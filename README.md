@@ -12,40 +12,36 @@ The goal of this project is to develop a solution that avoids race conditions, d
 
 ## **Features**
 
-**Use of threads:** Each philosopher is represented by a separate thread, allowing concurrent execution of eating, sleeping and thinking actions.
-**Synchronization:** Synchronization mechanisms, such as mutexes, are implemented to control access to shared resources (like forks).
-**Deadlock prevention:** Strategies are designed to avoid mutual blocking situations where philosophers cannot progress.
-**Starvation prevention:** We ensure that no philosopher is left indefinitely waiting to eat.
+- **Use of threads:** Each philosopher is represented by a separate thread, allowing concurrent execution of eating, sleeping and thinking actions.
+- **Synchronization:** Synchronization mechanisms, such as mutexes, are implemented to control access to shared resources (like forks).
+- **Deadlock prevention:** Strategies are designed to avoid mutual blocking situations where philosophers cannot progress.
+- **Starvation prevention:** We ensure that no philosopher is left indefinitely waiting to eat.
 
 ## **Compilation and Execution**
 ### Requirements
-Any C-compatible compiler.
-Make
+- Any C-compatible compiler.
+- Make.
 
 ### **Instructions**
 Clone this repository:
 
-sh
-Copy code
-git clone https://github.com/tu-usuario/philosophers.git
+```sh
+git clone git@github.com:saroca-f/philosophers.git
 cd philosophers
+```
 Compila el proyecto usando Make:
 
-sh
-Copy code
-`Make`
-Ejecuta el programa:
+```sh
+Make
+```
+Run the program:
 
-sh
-Copy code
-./philosophers <number_of_philosophers> <time_to_die> <time_to_eat> <time_to_sleep> [number_of_times_each_philosopher_must_eat]
-Ejemplo
-sh
-Copy code
-./philosophers 5 800 200 200
-Esto iniciará la simulación con 5 filósofos, donde cada filósofo morirá si no come en 800 ms, tarda 200 ms en comer y 200 ms en dormir.
+```Copy code
+./philo <number_of_philosophers> <time_to_die> <time_to_eat> <time_to_sleep> [number_of_times_each_philosopher_must_eat]
+```
+Example
 
-Estructura del Proyecto
-philosophers.c: Contiene la lógica principal del programa.
-philosopher.h: Define las estructuras y funciones utilizadas en el programa.
-Makefile: Facilita la compilación del proyecto.
+```
+./philo 5 800 200 200
+```
+This will start the simulation with 5 philosophers, where each philosopher will die if he does not eat in 800 ms, takes 200 ms to eat and 200 ms to sleep.
